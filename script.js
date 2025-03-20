@@ -1,8 +1,8 @@
 document.getElementById('download-btn').addEventListener('click', function() {
     try {
         const link = document.createElement('a');
-        link.href = './CV JOHsac Gomez.pdf';
-        link.download = 'CV JOHsac Gomez.pdf';
+        link.href = './CV Johsac Gomez.pdf';
+        link.download = 'CV Johsac Gomez.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
