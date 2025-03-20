@@ -8,6 +8,6 @@ document.getElementById('download-btn').addEventListener('click', function() {
         document.body.removeChild(link);
     } catch (error) {
         console.error('Error al descargar el PDF:', error.message);
-        alert('No se pudo descargar el PDF. Asegúrate de que el archivo CV JOHsac Gomez.pdf esté en la carpeta correcta.');
+        alert('No se pudo descargar el PDF. Asegúrate de que el archivo CV Johsac Gomez.pdf esté en la carpeta correcta.');
     }
 });
