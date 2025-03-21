@@ -5,25 +5,30 @@ body {
     line-height: 1.4;
 }
 
-/* Asegurar que el contenedor sea fluido */
 .container {
     max-width: 900px;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 100%; /* Asegurar que el contenedor use todo el ancho disponible */
 }
 
-/* Asegurar que las imágenes sean responsivas */
-img {
-    max-width: 100%;
-    height: auto;
+
+button.language-btn {
+    background-color: #1E90FF !important;
+    color: #FFFAF0 !important;
+    border: none !important;
+    padding: 8px 16px;
+    border-radius: 10px !important;
+    cursor: pointer;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* Ajustar el texto de contacto para que no se desborde */
-.contact-info {
-    word-break: break-word; /* Permitir que los enlaces largos se rompan */
+button.language-btn:hover {
+    background-color: #1565C0 !important; /* Un tono más oscuro al pasar el mouse */
 }
 
 button.download-btn {
@@ -96,13 +101,6 @@ h4 {
     margin-bottom: 3px;
 }
 
-h6 {
-    font-size: 1.em;
-    font-weight: 700;
-    color: #87CEEB !important; /* Azul claro */
-    margin-bottom: 2px;
-}
-
 .section-divider {
     border-top: 1px solid #ccc;
     margin-bottom: 10px;
@@ -156,109 +154,3 @@ p {
     margin-bottom: 5px;
 }
 
-/* Ajustes generales para pantallas pequeñas */
-@media (max-width: 767.98px) {
-    /* Ajustar el contenedor principal */
-    .container {
-        padding: 15px; /* Reducir el padding en móviles */
-    }
-
-    /* Ajustar el encabezado */
-    .profile-pic-container {
-        margin-bottom: 15px; /* Espacio entre la foto y el texto */
-    }
-
-    #profile-pic {
-        width: 100px; /* Reducir el tamaño de la foto en móviles */
-        height: 100px;
-    }
-
-    h1 {
-        font-size: 1.8em; /* Reducir el tamaño del nombre */
-    }
-
-    .title {
-        font-size: 1em; /* Reducir el tamaño del título */
-    }
-
-    .contact-info {
-        font-size: 0.85em; /* Reducir el tamaño del texto de contacto */
-    }
-
-    /* Ajustar el botón de descarga */
-    .download-btn {
-        font-size: 0.8em; /* Reducir el tamaño del botón */
-        padding: 6px 12px; /* Reducir el padding */
-    }
-
-    /* Ajustar las secciones */
-    h2 {
-        font-size: 1.4em; /* Reducir el tamaño de los títulos de sección */
-    }
-
-    h4 {
-        font-size: 1.1em; /* Reducir el tamaño de los subtítulos */
-    }
-
-    .details {
-        font-size: 0.8em; /* Reducir el tamaño de las fechas */
-    }
-
-    .location, p {
-        font-size: 0.9em; /* Reducir el tamaño del texto */
-    }
-
-    /* Ajustar la sección de habilidades */
-    .skills ul {
-        gap: 8px; /* Reducir el espacio entre los elementos */
-    }
-
-    .skills li {
-        font-size: 1em !important; /* Reducir el tamaño de la letra en móviles */
-        padding: 6px 10px !important; /* Reducir el padding */
-    }
-
-    /* Ajustar la sección de idiomas */
-    .languages-list li {
-        font-size: 0.9em; /* Reducir el tamaño del texto */
-    }
-
-    /* Ajustar las entradas de experiencia, educación y publicaciones */
-    .entry {
-        margin-bottom: 10px; /* Reducir el margen entre entradas */
-    }
-
-    .d-flex {
-        flex-direction: column; /* Apilar los elementos verticalmente */
-        align-items: flex-start; /* Alinear a la izquierda */
-    }
-
-    .details {
-        margin-top: 5px; /* Espacio entre el título y la fecha */
-    }
-}
-
-/* Ajustes para pantallas muy pequeñas (menores a 576px) */
-@media (max-width: 575.98px) {
-    h1 {
-        font-size: 1.5em; /* Reducir aún más el tamaño del nombre */
-    }
-
-    .title {
-        font-size: 0.9em;
-    }
-
-    .contact-info {
-        font-size: 0.8em;
-    }
-
-    #profile-pic {
-        width: 80px; /* Reducir aún más la foto */
-        height: 80px;
-    }
-
-    .download-btn {
-        font-size: 0.75em;
-        padding: 5px 10px;
-    }
-}
