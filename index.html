@@ -11,18 +11,26 @@
     <!-- Font Awesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
     <div class="container mt-4 mb-4">
         <header class="mb-4 position-relative">
             <div class="d-flex justify-content-end mb-3">
-                <button id="download-btn" class="download-btn" style="background-color: #1E90FF; color: #FFFAF0; border:#1E90FF; padding: 8px 16px; border-radius: 10px;"><i class="fas fa-download"></i> Descargar CV en PDF</button>
+                <button id="download-btn" class="download-btn" style="background-color: #1E90FF; color: #FFFAF0; border:#1E90FF; padding: 8px 16px; border-radius: 10px; margin-right: 10px;"><i class="fas fa-download"></i> <span id="download-text">Download CV in PDF</span></button>
+                <div class="dropdown" style="margin-left: 10px;">
+                    <button class="btn language-btn dropdown-toggle" type="button" id="language-btn" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #1E90FF; color: #FFFAF0; border:#1E90FF; padding: 8px 16px; border-radius: 10px;">
+                        <i class="fas fa-globe"></i> Language
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="language-btn">
+                        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="es">Spanish</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="row align-items-center">
                 <div class="col-12 col-md-3 text-center">
                     <div class="profile-pic-container">
-                        <img id="profile-pic" src="./cv.jpg" alt="Foto de perfil" class="rounded-circle">
+                        <img id="profile-pic" src="./cv.jpg" alt="Profile picture" class="rounded-circle">
                     </div>
                 </div>
                 <div class="col-12 col-md-9 text-center text-md-start">
@@ -37,123 +45,247 @@
             </div>
         </header>
 
-        <section class="about mb-4">
-            <h2>Resumen</h2>
-            <hr class="section-divider">
-            <p>Estudiante de Doctorado en Computación y Automatización (LCA, UNICAMP), especializado en deep learning e IA generativa aplicada a animación virtual para generación de gestos corporales basados en habla y texto. Máster en Estadística (UNICAMP, 2023) con especialización en métodos estadísticos computacionales, machine learning y análisis de datos. Ingeniero Mecánico (ESPOL, 2020). Experiencia en investigación académica, coorganización de eventos académicos y profesor asistente. Finalmente, disfruto participar en equipos multidisciplinarios, aportando creatividad, flexibilidad e innovación, siempre comprometido con la ética y la calidad profesional.</p>
-        </section>
+        <!-- Contenido en Español -->
+        <div id="content-es" class="content" style="display: none;">
+            <section class="about mb-4">
+                <h2>Resumen</h2>
+                <hr class="section-divider">
+                <p>Estudiante de Doctorado en Computación y Automatización (LCA, UNICAMP), especializado en deep learning e IA generativa aplicada a animación virtual para generación de gestos corporales basados en habla y texto. Máster en Estadística (UNICAMP, 2023) con especialización en métodos estadísticos computacionales, machine learning y análisis de datos. Ingeniero Mecánico (ESPOL, 2020). Experiencia en investigación académica, coorganización de eventos académicos y profesor asistente. Finalmente, disfruto participar en equipos multidisciplinarios, aportando creatividad, flexibilidad e innovación, siempre comprometido con la ética y la calidad profesional.</p>
+            </section>
 
-        <section class="experience mb-4">
-            <h2>Experiencia</h2>
-            <hr class="section-divider">
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h5>Investigador de Doctorado en el Laboratorio de Computación y Automatización</h5>
-                    <h6 class="details">Mar. 2023 – Presente</h6>
+            <section class="experience mb-4">
+                <h2>Experiencia</h2>
+                <hr class="section-divider">
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Investigador de Doctorado en el Laboratorio de Computación y Automatización</h5>
+                        <h6 class="details">Mar. 2023 – Presente</h6>
+                    </div>
+                    <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
+                    <p>Implementación en IA generativa, computación gráfica para generación de personajes virtuales 3D.</p>
                 </div>
-                <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
-                <p>Implementación en IA generativa, computación gráfica para generación de personajes virtuales 3D.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h5>Investigador de Maestría en el Instituto de Estadística</h5>
-                    <h6 class="details">Mar. 2021 – Oct. 2023</h6>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Investigador de Maestría en el Instituto de Estadística</h5>
+                        <h6 class="details">Mar. 2021 – Oct. 2023</h6>
+                    </div>
+                    <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
+                    <p>Desarrollo de modelos Markovianos, métricas en espacios de estados, e simulaciones con cadenas de Markov.</p>
                 </div>
-                <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
-                <p>Desarrollo de modelos Markovianos, métricas en espacios de estados, e simulaciones con cadenas de Markov.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h5>Profesor Asistente</h5>
-                    <h6 class="details">Mar. 2022 – Oct. 2023</h6>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Profesor Asistente</h5>
+                        <h6 class="details">Mar. 2022 – Oct. 2023</h6>
+                    </div>
+                    <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
+                    <p>Asistente de docencia del curso de estadística y computación.</p>
                 </div>
-                <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
-                <p>Asistente de docencia del curso de estadística y computación.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h5>Ingeniero de Prácticas</h5>
-                    <h6 class="details">Ene. 2019 – Abr. 2019</h6>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Pasantias</h5>
+                        <h6 class="details">Ene. 2019 – Abr. 2019</h6>
+                    </div>
+                    <p class="location">Ingenio San Carlos, Ecuador</p>
+                    <p>Diseño de sistemas de redes en aire comprimido, Guayas, Ecuador.</p>
                 </div>
-                <p class="location">Ingenio San Carlos, Ecuador</p>
-                <p>Diseño de sistemas de redes en aire comprimido, Guayas, Ecuador.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h5>Profesor Asistente</h5>
-                    <h6 class="details">Abr. 2016 – Sept. 2018</h6>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Profesor Asistente</h5>
+                        <h6 class="details">Abr. 2016 – Sept. 2018</h6>
+                    </div>
+                    <p class="location">Escuela Superior Politécnica del Litoral, Guayaquil, Ecuador</p>
+                    <p>Monitorías sobre disciplinas de cálculo diferencial e integral.</p>
                 </div>
-                <p class="location">Escuela Superior Politécnica del Litoral, Guayaquil, Ecuador</p>
-                <p>Monitorías sobre disciplinas de cálculo diferencial e integral.</p>
-            </div>
-        </section>
+            </section>
 
-        <section class="education mb-4">
-            <h2>Educación</h2>
-            <hr class="section-divider">
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h5>Doctorado en Eléctrica (Especialidad en Ingeniería en Computación)</h5>
-                    <h6 class="details">Mar. 2023 – Presente</h6>
+            <section class="education mb-4">
+                <h2>Educación</h2>
+                <hr class="section-divider">
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Doctorado en Eléctrica (Especialidad en Ingeniería en Computación)</h5>
+                        <h6 class="details">Mar. 2023 – Presente</h6>
+                    </div>
+                    <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
+                    <p>Actividades en el Laboratorio de Computación y Automatización. Enfoque en procesamiento de lenguaje natural, inteligencia artificial y lenguaje de programación.</p>
                 </div>
-                <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
-                <p>Actividades en el Laboratorio de Computación y Automatización. Enfoque en procesamiento de lenguaje natural, inteligencia artificial y lenguaje de programación.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h5>Maestría en Estadística</h5>
-                    <h6 class="details">Mar. 2021 – Oct. 2023</h6>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Maestría en Estadística</h5>
+                        <h6 class="details">Mar. 2021 – Oct. 2023</h6>
+                    </div>
+                    <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
+                    <p>Área de formación en métodos estadísticos computacionales, análisis de datos, procesos Markovianos y algoritmos de machine learning.</p>
                 </div>
-                <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
-                <p>Área de formación en métodos estadísticos computacionales, análisis de datos, procesos Markovianos y algoritmos de machine learning.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h5>Ingeniería Mecánica</h5>
-                    <h6 class="details">Sept. 2014 – Sept. 2020</h6>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Ingeniería Mecánica</h5>
+                        <h6 class="details">Sept. 2014 – Sept. 2020</h6>
+                    </div>
+                    <p class="location">Escuela Superior Politécnica del Litoral, Guayaquil, Ecuador</p>
+                    <p>Análisis y diseño de un sistema mejorado de transporte de café verde.</p>
                 </div>
-                <p class="location">Escuela Superior Politécnica del Litoral, Guayaquil, Ecuador</p>
-                <p>Análisis y diseño de un sistema mejorado de transporte de café verde.</p>
-            </div>
-        </section>
+            </section>
 
-        <section class="publications mb-4">
-            <h2>Publicaciones</h2>
-            <hr class="section-divider">
-            <div class="entry mb-3">
-                <h5>A Metric Based on the Efficient Determination Criterion</h5>
-                <p class="details">Entropy, 2024-06-19 | <a href="https://www.mdpi.com/1099-4300/26/6/526" target="_blank">DOI: 10.3390/e26060526</a></p>
-                <p>Coautores: Jesús García, Verónica Andrea González-López</p>
-            </div>
-            <div class="entry mb-3">
-                <h5>Benchmarking Speech-Driven Gesture Generation Models for Generalization to Unseen Voices and Noisy Environments</h5>
-                <p class="details">Conference Paper, 2024-11-04 | <a href="https://dl.acm.org/doi/10.1145/3686215.3688823" target="_blank">DOI: 10.1145/3686215.3688823</a></p>
-                <p>Coautores: Kevin Adier Inofuente-Colque, Leonardo Boufleur de Menezes Martins Marques, Paula Dornhofer Paro Costa, Rodolfo Luis Tonoli</p>
-            </div>
-        </section>
+            <section class="publications mb-4">
+                <h2>Publicaciones</h2>
+                <hr class="section-divider">
+                <div class="entry mb-3">
+                    <h5>A Metric Based on the Efficient Determination Criterion</h5>
+                    <p class="details">Entropy, 2024-06-19 | <a href="https://www.mdpi.com/1099-4300/26/6/526" target="_blank">DOI: 10.3390/e26060526</a></p>
+                    <p>Coautores: Jesús García, Verónica Andrea González-López</p>
+                </div>
+                <div class="entry mb-3">
+                    <h5>Benchmarking Speech-Driven Gesture Generation Models for Generalization to Unseen Voices and Noisy Environments</h5>
+                    <p class="details">Conference Paper, 2024-11-04 | <a href="https://dl.acm.org/doi/10.1145/3686215.3688823" target="_blank">DOI: 10.1145/3686215.3688823</a></p>
+                    <p>Coautores: Kevin Adier Inofuente-Colque, Leonardo Boufleur de Menezes Martins Marques, Paula Dornhofer Paro Costa, Rodolfo Luis Tonoli</p>
+                </div>
+            </section>
 
-        <section class="skills mb-4">
-            <h2>Habilidades</h2>
-            <hr class="section-divider">
-            <ul class="list-unstyled d-flex flex-wrap gap-2">
-                <li style="font-size: 1.em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Modelado de algoritmos de machine learning</li>
-                <li style="font-size: 1.em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Deep learning</li>
-                <li style="font-size: 1.em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">IA generativa</li>
-                <li style="font-size: 1.em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Métodos estadísticos computacionales</li>
-                <li style="font-size: 1.em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">R</li>
-                <li style="font-size: 1.em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Python</li>
-                <li style="font-size: 1.em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Blender</li>
-            </ul>
-        </section>
-        <section class="languages">
-            <h2>Idiomas</h2>
-            <hr class="section-divider">
-            <ul class="languages-list">
-                <li><strong>Inglés:</strong> Medio</li>
-                <li><strong>Portugués:</strong> Alta</li>
-                <li><strong>Español:</strong> Nativo</li>
-            </ul>
-        </section>
+            <section class="skills mb-4">
+                <h2>Habilidades</h2>
+                <hr class="section-divider">
+                <ul class="list-unstyled d-flex flex-wrap gap-2">
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Modelado de algoritmos de machine learning</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Deep learning</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">IA generativa</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Métodos estadísticos computacionales</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">R</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Python</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Blender</li>
+                </ul>
+            </section>
+            <section class="languages">
+                <h2>Idiomas</h2>
+                <hr class="section-divider">
+                <ul class="languages-list">
+                    <li><strong>Inglés:</strong> Medio</li>
+                    <li><strong>Portugués:</strong> Alta</li>
+                    <li><strong>Español:</strong> Nativo</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Contenido en Inglés -->
+        <div id="content-en" class="content" style="display: block;">
+            <section class="about mb-4">
+                <h2>Summary</h2>
+                <hr class="section-divider">
+                <p>PhD student in Computing and Automation (LCA, UNICAMP), specializing in deep learning and generative AI applied to virtual animation for generating body gestures based on speech and text. Master’s in Statistics (UNICAMP, 2023) with a focus on computational statistical methods, machine learning, and data analysis. Mechanical Engineer (ESPOL, 2020). Experienced in academic research, co-organization of academic events, and teaching assistance. I enjoy participating in multidisciplinary teams, bringing creativity, flexibility, and innovation, always committed to ethics and professional quality.</p>
+            </section>
+
+            <section class="experience mb-4">
+                <h2>Experience</h2>
+                <hr class="section-divider">
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>PhD Researcher at the Laboratory of Computing and Automation</h5>
+                        <h6 class="details">Mar. 2023 – Present</h6>
+                    </div>
+                    <p class="location">State University of Campinas, Campinas, Brazil</p>
+                    <p>Implementation of generative AI and computer graphics for the creation of 3D virtual characters.</p>
+                </div>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Master’s Researcher at the Institute of Statistics</h5>
+                        <h6 class="details">Mar. 2021 – Oct. 2023</h6>
+                    </div>
+                    <p class="location">State University of Campinas, Campinas, Brazil</p>
+                    <p>Development of Markovian models, metrics in state spaces, and simulations with Markov chains.</p>
+                </div>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Teaching Assistant</h5>
+                        <h6 class="details">Mar. 2022 – Oct. 2023</h6>
+                    </div>
+                    <p class="location">State University of Campinas, Campinas, Brazil</p>
+                    <p>Teaching assistant for the statistics and computing course.</p>
+                </div>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Internships</h5>
+                        <h6 class="details">Jan. 2019 – Apr. 2019</h6>
+                    </div>
+                    <p class="location">Ingenio San Carlos, Ecuador</p>
+                    <p>Design of compressed air network systems, Guayas, Ecuador.</p>
+                </div>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Teaching Assistant</h5>
+                        <h6 class="details">Apr. 2016 – Sep. 2018</h6>
+                    </div>
+                    <p class="location">Escuela Superior Politécnica del Litoral, Guayaquil, Ecuador</p>
+                    <p>Tutoring in differential and integral calculus disciplines.</p>
+                </div>
+            </section>
+
+            <section class="education mb-4">
+                <h2>Education</h2>
+                <hr class="section-divider">
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>PhD in Electrical Engineering (Specialization in Computer Engineering)</h5>
+                        <h6 class="details">Mar. 2023 – Present</h6>
+                    </div>
+                    <p class="location">State University of Campinas, Campinas, Brazil</p>
+                    <p>Activities at the Laboratory of Computing and Automation. Focus on natural language processing, artificial intelligence, and programming languages.</p>
+                </div>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Master’s in Statistics</h5>
+                        <h6 class="details">Mar. 2021 – Oct. 2023</h6>
+                    </div>
+                    <p class="location">State University of Campinas, Campinas, Brazil</p>
+                    <p>Training in computational statistical methods, data analysis, Markovian processes, and machine learning algorithms.</p>
+                </div>
+                <div class="entry mb-3">
+                    <div class="d-flex justify-content-between">
+                        <h5>Mechanical Engineering</h5>
+                        <h6 class="details">Sep. 2014 – Sep. 2020</h6>
+                    </div>
+                    <p class="location">Escuela Superior Politécnica del Litoral, Guayaquil, Ecuador</p>
+                    <p>Analysis and design of an improved green coffee transportation system.</p>
+                </div>
+            </section>
+
+            <section class="publications mb-4">
+                <h2>Publications</h2>
+                <hr class="section-divider">
+                <div class="entry mb-3">
+                    <h5>A Metric Based on the Efficient Determination Criterion</h5>
+                    <p class="details">Entropy, 2024-06-19 | <a href="https://www.mdpi.com/1099-4300/26/6/526" target="_blank">DOI: 10.3390/e26060526</a></p>
+                    <p>Co-authors: Jesús García, Verónica Andrea González-López</p>
+                </div>
+                <div class="entry mb-3">
+                    <h5>Benchmarking Speech-Driven Gesture Generation Models for Generalization to Unseen Voices and Noisy Environments</h5>
+                    <p class="details">Conference Paper, 2024-11-04 | <a href="https://dl.acm.org/doi/10.1145/3686215.3688823" target="_blank">DOI: 10.1145/3686215.3688823</a></p>
+                    <p>Co-authors: Kevin Adier Inofuente-Colque, Leonardo Boufleur de Menezes Martins Marques, Paula Dornhofer Paro Costa, Rodolfo Luis Tonoli</p>
+                </div>
+            </section>
+
+            <section class="skills mb-4">
+                <h2>Skills</h2>
+                <hr class="section-divider">
+                <ul class="list-unstyled d-flex flex-wrap gap-2">
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Modeling of machine learning algorithms</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Deep learning</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Generative AI</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Computational statistical methods</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">R</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Python</li>
+                    <li style="font-size: 1em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Blender</li>
+                </ul>
+            </section>
+            <section class="languages">
+                <h2>Languages</h2>
+                <hr class="section-divider">
+                <ul class="languages-list">
+                    <li><strong>English:</strong> Intermediate</li>
+                    <li><strong>Portuguese:</strong> Advanced</li>
+                    <li><strong>Spanish:</strong> Native</li>
+                </ul>
+            </section>
+        </div>
     </div>
 
     <script src="script.js"></script>
