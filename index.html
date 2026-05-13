@@ -1,164 +1,322 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johsac Isbac Gomez Sanchez - Curriculum</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    
+    <title>Johsac Gomez — PhD Researcher in GenAI & LLMs</title>
+    <meta name="description" content="PhD Researcher in Generative AI & Large Language Models at UNICAMP. Statistician, Data Scientist, and AI Agent developer.">
+    <meta name="author" content="Johsac Isbac Gomez Sanchez">
+    <meta property="og:title" content="Johsac Gomez — PhD Researcher in GenAI & LLMs">
+    <meta property="og:description" content="PhD Researcher specializing in Generative AI, LLMs, and multimodal architectures at UNICAMP Brazil.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container mt-4 mb-4">
-        <header class="mb-4 position-relative">
-            <div class="d-flex justify-content-end mb-3">
-                <button id="download-btn" class="download-btn" style="background-color: #1E90FF; color: #FFFAF0; border:#1E90FF; padding: 8px 16px; border-radius: 10px;"><i class="fas fa-download"></i> Descargar CV en PDF</button>
+    <div class="bg-particles" aria-hidden="true"><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div></div>
+
+    <!-- Navigation -->
+    <nav class="nav-bar" id="navbar">
+        <div class="nav-content">
+            <a href="#top" class="nav-logo">JG<span class="logo-dot">.</span></a>
+            <div class="nav-links" id="nav-links-en">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#publications">Publications</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
             </div>
-            <div class="row align-items-center">
-                <div class="col-4 col-md-3 text-center">
-                    <div class="profile-pic-container">
-                        <img id="profile-pic" src="./cv.jpg" alt="Foto de perfil" class="rounded-circle">
+            <div class="nav-links" id="nav-links-es" style="display:none;">
+                <a href="#about">Acerca</a>
+                <a href="#experience">Experiencia</a>
+                <a href="#education">Educación</a>
+                <a href="#publications">Publicaciones</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#skills">Habilidades</a>
+            </div>
+            <div class="nav-right">
+                <button id="lang-btn" class="btn-lang" aria-label="Switch language"><i class="fas fa-globe"></i> <span>ES</span></button>
+                <button id="download-btn" class="btn-download" aria-label="Download CV"><i class="fas fa-download"></i> <span id="download-text">Download CV</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+
+        <!-- HERO -->
+        <header class="hero-section" id="top">
+            <div class="hero-container reveal">
+                <div class="hero-photo-wrapper">
+                    <div class="photo-ring">
+                        <img id="profile-pic" src="./cv.jpg" alt="Johsac Gomez" class="hero-photo">
                     </div>
                 </div>
-                <div class="col-8 col-md-9 text-center text-md-start">
-                    <h1>Johsac Isbac Gomez Sanchez</h1>
-                    <p class="title">Research Analyst | GenAI | LLM | Statistical Methods</p>
-                    <p class="contact-info">
-                        Guayaquil, Ecuador | <a href="mailto:johsacgomez16@gmail.com">johsacgomez16@gmail.com</a> | 
-                        <a href="https://www.linkedin.com/in/johsac-gomez-40b6901b4/" target="_blank">LinkedIn</a> | 
-                        <a href="https://orcid.org/0009-0008-0468-6659" target="_blank">ORCID</a>
+                <div class="hero-text">
+                    <h1 class="hero-name">Johsac Isbac <span class="gradient-text">Gomez Sanchez</span></h1>
+                    <p class="hero-title" id="hero-title-en">PhD Researcher in GenAI & Large Language Models | AI Agent | Statistician & Data Scientist | Python, PyTorch, RAG, LangChain</p>
+                    <p class="hero-title" id="hero-title-es" style="display:none;">Investigador de Doctorado en IA Generativa & Modelos de Lenguaje | Agente IA | Estadístico & Científico de Datos | Python, PyTorch, RAG, LangChain</p>
+                    <p class="hero-contact">
+                        <span><i class="fas fa-map-marker-alt"></i> Campinas, Brazil</span>
+                        <span><i class="fas fa-envelope"></i> <a href="mailto:johsacgomez16@gmail.com">johsacgomez16@gmail.com</a></span>
                     </p>
+                    <div class="hero-links">
+                        <a href="https://www.linkedin.com/in/johsac-gomez-40b6901b4/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Johsac" target="_blank" rel="noopener" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://orcid.org/0009-0008-0468-6659" target="_blank" rel="noopener" aria-label="ORCID" class="social-link"><i class="fab fa-orcid"></i></a>
+                    </div>
                 </div>
             </div>
         </header>
 
-        <section class="about mb-4">
-            <h2>Resumen</h2>
-            <hr class="section-divider">
-            <p>Estudiante de Doctorado en Computación y Automatización (LCA, UNICAMP), especializado en deep learning e IA generativa aplicada a animación virtual para generación de gestos corporales basados en habla y texto. Máster en Estadística (UNICAMP, 2023) con especialización en métodos estadísticos computacionales, machine learning y análisis de datos. Ingeniero Mecánico (ESPOL, 2020). Experiencia en investigación académica, coorganización de eventos académicos y profesor asistente. Finalmente, disfruto participar en equipos multidisciplinarios, aportando creatividad, flexibilidad e innovación, siempre comprometido con la ética y la calidad profesional.</p>
-        </section>
-
-        <section class="experience mb-4">
-            <h2>Experiencia</h2>
-            <hr class="section-divider">
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h4>Investigador de Doctorado en el Laboratorio de Computación y Automatización</h4>
-                    <h4 class="details">Mar. 2023 – Presente</h4>
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="section-inner reveal">
+                <h2 class="section-title"><span class="section-icon"><i class="fas fa-user-astronaut"></i></span> <span class="lang-en">About</span><span class="lang-es" style="display:none;">Acerca de mí</span></h2>
+                <div class="glass-card">
+                    <div class="lang-en">
+                        <p class="about-text">PhD Researcher in <strong>Generative AI & Large Language Models</strong> at the Laboratory of Computing and Automation (LCA), <strong>Universidade Estadual de Campinas (UNICAMP)</strong>, Brazil. My research focuses on multimodal generative architectures for <strong>3D gesture synthesis</strong> driven by speech and text — winner of the <strong class="highlight">Reproducibility Award at GENEA 2025 (ACM Multimedia)</strong>.</p>
+                        <p class="about-text">With a Master's in Statistics (UNICAMP, 2023) and a background in Mechanical Engineering (ESPOL, 2020), I bridge the gap between <strong>statistical rigor and AI innovation</strong>. My stack spans <strong>RAG, LangChain, PyTorch, Agentic AI</strong>, and I'm passionate about building production-ready AI systems that serve both academic research and industry applications in Tech, FinTech, and Consulting.</p>
+                    </div>
+                    <div class="lang-es" style="display:none;">
+                        <p class="about-text">Investigador de Doctorado en <strong>IA Generativa & Modelos de Lenguaje</strong> en el Laboratorio de Computación y Automatización (LCA), <strong>Universidade Estadual de Campinas (UNICAMP)</strong>, Brasil. Mi investigación se centra en arquitecturas generativas multimodales para la <strong>síntesis de gestos 3D</strong> a partir de habla y texto — ganador del <strong class="highlight">Premio de Reproducibilidad en GENEA 2025 (ACM Multimedia)</strong>.</p>
+                        <p class="about-text">Con una Maestría en Estadística (UNICAMP, 2023) y formación en Ingeniería Mecánica (ESPOL, 2020), conecto el <strong>rigor estadístico con la innovación en IA</strong>. Mi stack incluye <strong>RAG, LangChain, PyTorch, IA Agéntica</strong>, y me apasiona construir sistemas de IA listos para producción que sirvan tanto a la investigación académica como a aplicaciones industriales en Tech, FinTech y Consultoría.</p>
+                    </div>
                 </div>
-                <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
-                <p>Implementación en IA generativa, computación gráfica para generación de personajes virtuales 3D.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h4>Investigador de Maestría en el Instituto de Estadística</h4>
-                    <h4 class="details">Mar. 2021 – Oct. 2023</h4>
-                </div>
-                <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
-                <p>Desarrollo de modelos Markovianos, métricas en espacios de estados, e simulaciones con cadenas de Markov.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h4>Profesor Asistente</h4>
-                    <h4 class="details">Mar. 2022 – Oct. 2023</h4>
-                </div>
-                <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
-                <p>Asistente de docencia del curso de estadística y computación.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h4>Ingeniero de Prácticas</h4>
-                    <h4 class="details">Ene. 2019 – Abr. 2019</h4>
-                </div>
-                <p class="location">Ingenio San Carlos, Ecuador</p>
-                <p>Diseño de sistemas de redes en aire comprimido, Guayas, Ecuador.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h4>Profesor Asistente</h4>
-                    <h4 class="details">Abr. 2016 – Sept. 2018</h4>
-                </div>
-                <p class="location">Escuela Superior Politécnica del Litoral, Guayaquil, Ecuador</p>
-                <p>Monitorías sobre disciplinas de cálculo diferencial e integral.</p>
             </div>
         </section>
 
-        <section class="education mb-4">
-            <h2>Educación</h2>
-            <hr class="section-divider">
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h4>Doctorado en Eléctrica (Especialidad en Ingeniería en Computación)</h4>
-                    <h4 class="details">Mar. 2023 – Presente</h4>
+        <!-- AWARDS -->
+        <section class="section" id="awards">
+            <div class="section-inner reveal">
+                <h2 class="section-title"><span class="section-icon"><i class="fas fa-trophy"></i></span> <span class="lang-en">Awards & Honors</span><span class="lang-es" style="display:none;">Premios & Honores</span></h2>
+                <div class="glass-card award-card">
+                    <div class="award-badge">🏆</div>
+                    <div class="award-content">
+                        <h3 class="award-name"><a href="https://genea-workshop.github.io/2025/workshop/#reproducibility-award" target="_blank" rel="noopener">Reproducibility Award — GENEA 2025</a></h3>
+                        <p class="award-org">ACM Multimedia (ACMMM 2025) • GENEA Workshop on Gesture Generation</p>
+                        <p class="award-desc lang-en">Awarded for the LLM-Gesture-Pipeline work demonstrating reproducible, state-of-the-art gesture generation from speech using Large Language Models.</p>
+                        <p class="award-desc lang-es" style="display:none;">Otorgado por el trabajo LLM-Gesture-Pipeline que demuestra generación de gestos reproducible y de última generación a partir del habla usando Modelos de Lenguaje.</p>
+                    </div>
                 </div>
-                <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
-                <p>Actividades en el Laboratorio de Computación y Automatización. Enfoque en procesamiento de lenguaje natural, inteligencia artificial y lenguaje de programación.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h4>Maestría en Estadística</h4>
-                    <h4 class="details">Mar. 2021 – Oct. 2023</h4>
-                </div>
-                <p class="location">Universidad Estadual de Campinas, Campinas, Brasil</p>
-                <p>Área de formación en métodos estadísticos computacionales, análisis de datos, procesos Markovianos y algoritmos de machine learning.</p>
-            </div>
-            <div class="entry mb-3">
-                <div class="d-flex justify-content-between">
-                    <h4>Ingeniería Mecánica</h4>
-                    <h4 class="details">Sept. 2014 – Sept. 2020</h4>
-                </div>
-                <p class="location">Escuela Superior Politécnica del Litoral, Guayaquil, Ecuador</p>
-                <p>Análisis y diseño de un sistema mejorado de transporte de café verde.</p>
             </div>
         </section>
 
-        <section class="publications mb-4">
-            <h2>Publicaciones</h2>
-            <hr class="section-divider">
-            <div class="entry mb-3">
-                <h4>A Metric Based on the Efficient Determination Criterion</h4>
-                <p class="details">Entropy, 2024-06-19 | <a href="https://www.mdpi.com/1099-4300/26/6/526" target="_blank">DOI: 10.3390/e26060526</a></p>
-                <p>Coautores: Jesús García, Verónica Andrea González-López</p>
-            </div>
-            <div class="entry mb-3">
-                <h4>Benchmarking Speech-Driven Gesture Generation Models for Generalization to Unseen Voices and Noisy Environments</h4>
-                <p class="details">Conference Paper, 2024-11-04 | <a href="https://dl.acm.org/doi/10.1145/3686215.3688823" target="_blank">DOI: 10.1145/3686215.3688823</a></p>
-                <p>Coautores: Kevin Adier Inofuente-Colque, Leonardo Boufleur de Menezes Martins Marques, Paula Dornhofer Paro Costa, Rodolfo Luis Tonoli</p>
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience">
+            <div class="section-inner reveal">
+                <h2 class="section-title"><span class="section-icon"><i class="fas fa-briefcase"></i></span> <span class="lang-en">Experience</span><span class="lang-es" style="display:none;">Experiencia</span></h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="lang-en">PhD Researcher — Laboratory of Computing and Automation (LCA)</h3>
+                                <h3 class="lang-es" style="display:none;">Investigador de Doctorado — Laboratorio de Computación y Automatización (LCA)</h3>
+                                <span class="timeline-date">Mar 2023 — Present</span>
+                            </div>
+                            <p class="timeline-location"><i class="fas fa-university"></i> UNICAMP, Campinas, Brazil</p>
+                            <p class="lang-en">Researching multimodal generative architectures for 3D virtual character gesture synthesis. Developing LLM-driven pipelines integrating speech, text, and motion data. Winner of the Reproducibility Award at GENEA 2025 (ACMMM).</p>
+                            <p class="lang-es" style="display:none;">Investigación en arquitecturas generativas multimodales para síntesis de gestos de personajes virtuales 3D. Desarrollo de pipelines basados en LLM integrando habla, texto y datos de movimiento. Ganador del Premio de Reproducibilidad en GENEA 2025 (ACMMM).</p>
+                            <div class="timeline-tags"><span class="tag">Generative AI</span><span class="tag">LLMs</span><span class="tag">PyTorch</span><span class="tag">Computer Graphics</span></div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="lang-en">Academic Researcher & Teaching Assistant</h3>
+                                <h3 class="lang-es" style="display:none;">Investigador Académico & Profesor Asistente</h3>
+                                <span class="timeline-date">2023 — 2024</span>
+                            </div>
+                            <p class="timeline-location"><i class="fas fa-university"></i> UNICAMP, Campinas, Brazil</p>
+                            <p class="lang-en">Applied research in Machine Learning, Generative AI, and Statistics. Teaching assistant for courses in statistics and computational methods.</p>
+                            <p class="lang-es" style="display:none;">Investigación aplicada en Machine Learning, IA Generativa y Estadística. Asistente de docencia en cursos de estadística y métodos computacionales.</p>
+                            <div class="timeline-tags"><span class="tag">Machine Learning</span><span class="tag">Statistics</span><span class="tag">Teaching</span></div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="lang-en">Master's Researcher — Institute of Statistics</h3>
+                                <h3 class="lang-es" style="display:none;">Investigador de Maestría — Instituto de Estadística</h3>
+                                <span class="timeline-date">Mar 2021 — Oct 2023</span>
+                            </div>
+                            <p class="timeline-location"><i class="fas fa-university"></i> UNICAMP, Campinas, Brazil</p>
+                            <p class="lang-en">Developed Markovian models, metrics in state spaces, and simulations with Markov chains. Published a novel metric in the journal Entropy.</p>
+                            <p class="lang-es" style="display:none;">Desarrollo de modelos Markovianos, métricas en espacios de estados y simulaciones con cadenas de Markov. Publicación de una métrica novedosa en la revista Entropy.</p>
+                            <div class="timeline-tags"><span class="tag">Markov Chains</span><span class="tag">Statistical Methods</span><span class="tag">R</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="skills mb-4">
-            <h2>Habilidades</h2>
-            <hr class="section-divider">
-            <ul class="list-unstyled d-flex flex-wrap gap-2">
-                <li style="font-size: 1.2em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Modelado de algoritmos de machine learning</li>
-                <li style="font-size: 1.2em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Deep learning</li>
-                <li style="font-size: 1.2em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">IA generativa</li>
-                <li style="font-size: 1.2em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Métodos estadísticos computacionales</li>
-                <li style="font-size: 1.2em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">R</li>
-                <li style="font-size: 1.2em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Python</li>
-                <li style="font-size: 1.2em; background-color: #1E90FF; color: #FFFAF0; padding: 8px 12px; border-radius: 5px;">Blender</li>
-            </ul>
+        <!-- EDUCATION -->
+        <section class="section" id="education">
+            <div class="section-inner reveal">
+                <h2 class="section-title"><span class="section-icon"><i class="fas fa-graduation-cap"></i></span> <span class="lang-en">Education</span><span class="lang-es" style="display:none;">Educación</span></h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="lang-en">PhD in Electrical Engineering <span class="edu-focus">(Computer Science — GenAI & LLMs)</span></h3>
+                                <h3 class="lang-es" style="display:none;">Doctorado en Ingeniería Eléctrica <span class="edu-focus">(Computación — IA Generativa & LLMs)</span></h3>
+                                <span class="timeline-date">Mar 2023 — Present</span>
+                            </div>
+                            <p class="timeline-location"><i class="fas fa-university"></i> UNICAMP, Campinas, Brazil</p>
+                            <p class="lang-en">Research at the Laboratory of Computing and Automation (LCA). Focus on NLP, Generative AI, LLMs, and multimodal architectures.</p>
+                            <p class="lang-es" style="display:none;">Investigación en el Laboratorio de Computación y Automatización (LCA). Enfoque en PLN, IA Generativa, LLMs y arquitecturas multimodales.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="lang-en">Master in Statistics</h3>
+                                <h3 class="lang-es" style="display:none;">Maestría en Estadística</h3>
+                                <span class="timeline-date">Mar 2021 — Oct 2023</span>
+                            </div>
+                            <p class="timeline-location"><i class="fas fa-university"></i> UNICAMP, Campinas, Brazil</p>
+                            <p class="lang-en">Specialization in computational statistical methods, data analysis, Markovian processes, and machine learning algorithms.</p>
+                            <p class="lang-es" style="display:none;">Especialización en métodos estadísticos computacionales, análisis de datos, procesos Markovianos y algoritmos de machine learning.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="lang-en">Bachelor in Mechanical Engineering</h3>
+                                <h3 class="lang-es" style="display:none;">Ingeniería Mecánica</h3>
+                                <span class="timeline-date">Sep 2014 — Sep 2020</span>
+                            </div>
+                            <p class="timeline-location"><i class="fas fa-university"></i> ESPOL, Guayaquil, Ecuador</p>
+                            <p class="lang-en">Thesis: Analysis and design of an improved green coffee transportation system.</p>
+                            <p class="lang-es" style="display:none;">Tesis: Análisis y diseño de un sistema mejorado de transporte de café verde.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="languages">
-            <h2>Idiomas</h2>
-            <hr class="section-divider">
-            <ul class="languages-list">
-                <li><strong>Inglés:</strong> Medio</li>
-                <li><strong>Portugués:</strong> Alta</li>
-                <li><strong>Español:</strong> Nativo</li>
-            </ul>
-        </section>
-    </div>
 
+        <!-- PUBLICATIONS -->
+        <section class="section" id="publications">
+            <div class="section-inner reveal">
+                <h2 class="section-title"><span class="section-icon"><i class="fas fa-book-open"></i></span> <span class="lang-en">Publications</span><span class="lang-es" style="display:none;">Publicaciones</span></h2>
+                <div class="glass-card pub-card">
+                    <div class="pub-venue">ACMMM 2025</div>
+                    <h3 class="pub-title">From Embeddings to Language Models: A Comparative Analysis of Feature Extractors for Text-Only and Multimodal Gesture Generation</h3>
+                    <p class="pub-meta">
+                        <span><i class="fas fa-users"></i> GENEA Workshop at ACM Multimedia 2025</span>
+                        <span class="pub-award"><i class="fas fa-award"></i> Reproducibility Award</span>
+                    </p>
+                    <p class="pub-links">
+                        <a href="https://dl.acm.org/doi/10.1145/3746268.3759431" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> DOI: 10.1145/3746268.3759431</a>
+                        <a href="https://github.com/AI-Unicamp/LLM-Gesture-Pipelines" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                    </p>
+                </div>
+                <div class="glass-card pub-card">
+                    <div class="pub-venue">ICMI 2024</div>
+                    <h3 class="pub-title">Benchmarking Speech-Driven Gesture Generation Models for Generalization to Unseen Voices and Noisy Environments</h3>
+                    <p class="pub-meta">
+                        <span><i class="fas fa-calendar"></i> November 2024</span>
+                        <span><i class="fas fa-users"></i> With K. Inofuente-Colque, L. Boufleur, P. Costa, R. Tonoli</span>
+                    </p>
+                    <p class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3686215.3688823" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> DOI: 10.1145/3686215.3688823</a></p>
+                </div>
+                <div class="glass-card pub-card">
+                    <div class="pub-venue">Entropy 2024</div>
+                    <h3 class="pub-title">A Metric Based on the Efficient Determination Criterion</h3>
+                    <p class="pub-meta">
+                        <span><i class="fas fa-calendar"></i> June 2024</span>
+                        <span><i class="fas fa-users"></i> With J. García, V. A. González-López</span>
+                    </p>
+                    <p class="pub-links"><a href="https://www.mdpi.com/1099-4300/26/6/526" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> DOI: 10.3390/e26060526</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="section-inner reveal">
+                <h2 class="section-title"><span class="section-icon"><i class="fas fa-rocket"></i></span> <span class="lang-en">Featured Projects</span><span class="lang-es" style="display:none;">Proyectos Destacados</span></h2>
+                <div class="projects-grid">
+                    <a href="https://github.com/AI-Unicamp/LLM-Gesture-Pipelines" target="_blank" rel="noopener" class="project-card glass-card">
+                        <div class="project-header"><i class="fab fa-github project-icon"></i><span class="project-badge">🏆 Award Winner</span></div>
+                        <h3 class="project-name">LLM-Gesture-Pipelines</h3>
+                        <p class="project-desc">LLM-driven pipeline for generating realistic 3D body gestures from speech. GENEA 2025 entry winning the Reproducibility Award at ACM Multimedia.</p>
+                        <div class="project-tech"><span>Python</span><span>PyTorch</span><span>LLMs</span></div>
+                    </a>
+                    <a href="https://github.com/AI-Unicamp/Benchmarking-SDGG-Models" target="_blank" rel="noopener" class="project-card glass-card">
+                        <div class="project-header"><i class="fab fa-github project-icon"></i><span class="project-badge badge-research">📊 Research</span></div>
+                        <h3 class="project-name">Benchmarking-SDGG-Models</h3>
+                        <p class="project-desc">Framework for evaluating Speech-Driven Gesture Generation models across unseen voices and noisy environments.</p>
+                        <div class="project-tech"><span>Python</span><span>Deep Learning</span><span>Evaluation</span></div>
+                    </a>
+                    <a href="https://github.com/Johsac/systematic-review-automator" target="_blank" rel="noopener" class="project-card glass-card">
+                        <div class="project-header"><i class="fab fa-github project-icon"></i><span class="project-badge badge-ai">🤖 AI Agent</span></div>
+                        <h3 class="project-name">Systematic Review Automator</h3>
+                        <p class="project-desc">AI-powered tool that automates metadata extraction from scientific papers into Google Sheets using Gemini API and agentic AI workflows.</p>
+                        <div class="project-tech"><span>JavaScript</span><span>Gemini API</span><span>Agentic AI</span></div>
+                    </a>
+                    <a href="https://github.com/Johsac/etoro-portfolio-evolution" target="_blank" rel="noopener" class="project-card glass-card">
+                        <div class="project-header"><i class="fab fa-github project-icon"></i><span class="project-badge badge-fintech">💹 FinTech</span></div>
+                        <h3 class="project-name">eToro Portfolio Evolution</h3>
+                        <p class="project-desc">Professional-grade financial analytics dashboard with AI Copilot powered by Gemini. Multi-agent orchestrator for portfolio analysis.</p>
+                        <div class="project-tech"><span>Python</span><span>Streamlit</span><span>Gemini AI</span></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <div class="section-inner reveal">
+                <h2 class="section-title"><span class="section-icon"><i class="fas fa-code"></i></span> <span class="lang-en">Skills</span><span class="lang-es" style="display:none;">Habilidades</span></h2>
+                <div class="skills-grid">
+                    <div class="glass-card skill-category">
+                        <h3 class="skill-cat-title"><i class="fas fa-brain"></i> GenAI & NLP</h3>
+                        <div class="skill-tags"><span class="skill-tag">Large Language Models</span><span class="skill-tag">RAG</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">LangChain</span><span class="skill-tag">Hugging Face</span><span class="skill-tag">Agentic AI</span></div>
+                    </div>
+                    <div class="glass-card skill-category">
+                        <h3 class="skill-cat-title"><i class="fas fa-terminal"></i> Core Tech</h3>
+                        <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">PyTorch</span><span class="skill-tag">R</span><span class="skill-tag">SQL</span><span class="skill-tag">Streamlit</span><span class="skill-tag">Git</span><span class="skill-tag">Blender</span></div>
+                    </div>
+                    <div class="glass-card skill-category">
+                        <h3 class="skill-cat-title"><i class="fas fa-chart-bar"></i> Data Science</h3>
+                        <div class="skill-tags"><span class="skill-tag">Machine Learning</span><span class="skill-tag">Deep Learning</span><span class="skill-tag">Statistical Modeling</span><span class="skill-tag">Predictive Analytics</span><span class="skill-tag">Data Visualization</span><span class="skill-tag">A/B Testing</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section class="section" id="languages">
+            <div class="section-inner reveal">
+                <h2 class="section-title"><span class="section-icon"><i class="fas fa-globe"></i></span> <span class="lang-en">Languages</span><span class="lang-es" style="display:none;">Idiomas</span></h2>
+                <div class="languages-grid">
+                    <div class="glass-card lang-card"><span class="lang-flag">🇪🇸</span><h3 class="lang-name lang-en">Spanish</h3><h3 class="lang-name lang-es" style="display:none;">Español</h3><div class="lang-level"><div class="lang-bar" style="--level:100%"></div></div><span class="lang-label lang-en">Native</span><span class="lang-label lang-es" style="display:none;">Nativo</span></div>
+                    <div class="glass-card lang-card"><span class="lang-flag">🇧🇷</span><h3 class="lang-name lang-en">Portuguese</h3><h3 class="lang-name lang-es" style="display:none;">Portugués</h3><div class="lang-level"><div class="lang-bar" style="--level:90%"></div></div><span class="lang-label lang-en">Advanced</span><span class="lang-label lang-es" style="display:none;">Avanzado</span></div>
+                    <div class="glass-card lang-card"><span class="lang-flag">🇺🇸</span><h3 class="lang-name lang-en">English</h3><h3 class="lang-name lang-es" style="display:none;">Inglés</h3><div class="lang-level"><div class="lang-bar" style="--level:75%"></div></div><span class="lang-label lang-en">Professional</span><span class="lang-label lang-es" style="display:none;">Profesional</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Johsac Gomez. Built with passion for AI & open source.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/johsac-gomez-40b6901b4/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Johsac" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://orcid.org/0009-0008-0468-6659" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
-    <!-- Bootstrap JS y Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
