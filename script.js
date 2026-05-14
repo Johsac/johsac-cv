@@ -3,33 +3,41 @@
    ============================================ */
 
 // --- PDF Download ---
-document.getElementById('download-btn').addEventListener('click', function () {
+var currentLang = 'en';
+
+function downloadCV() {
     try {
         var link = document.createElement('a');
-        link.href = './CV Johsac Gomez.pdf';
-        link.download = 'CV_Johsac_Gomez.pdf';
+        if (currentLang === 'es') {
+            link.href = './CV Johsac Gomez Español.pdf';
+            link.download = 'CV_Johsac_Gomez_Espanol.pdf';
+        } else {
+            link.href = './CV Johsac Gomez English.pdf';
+            link.download = 'CV_Johsac_Gomez_English.pdf';
+        }
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
     } catch (error) {
         console.error('Error downloading PDF:', error.message);
     }
-});
+}
+
+document.getElementById('download-btn').addEventListener('click', downloadCV);
 
 // --- Language Toggle ---
 (function () {
-    var currentLang = 'en';
     var langBtn = document.getElementById('lang-btn');
     var downloadText = document.getElementById('download-text');
 
     langBtn.addEventListener('click', function () {
         if (currentLang === 'en') {
             currentLang = 'es';
-            langBtn.innerHTML = '<span class="lang-flag">🇪🇸</span><span class="lang-label">Language / EN</span>';
+            langBtn.innerHTML = '<span class="lang-flag">🇪🇸</span><span class="lang-label">Language Español</span>';
             downloadText.textContent = 'Descargar CV';
         } else {
             currentLang = 'en';
-            langBtn.innerHTML = '<span class="lang-flag">🇺🇸</span><span class="lang-label">Language / ES</span>';
+            langBtn.innerHTML = '<span class="lang-flag">🇺🇸</span><span class="lang-label">Language English</span>';
             downloadText.textContent = 'Download CV';
         }
 
