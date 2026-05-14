@@ -25,11 +25,11 @@ document.getElementById('download-btn').addEventListener('click', function () {
     langBtn.addEventListener('click', function () {
         if (currentLang === 'en') {
             currentLang = 'es';
-            langBtn.innerHTML = '<i class="fas fa-globe"></i> <span>EN</span>';
+            langBtn.innerHTML = '<span class="lang-flag">🇪🇸</span><span class="lang-label">Language / EN</span>';
             downloadText.textContent = 'Descargar CV';
         } else {
             currentLang = 'en';
-            langBtn.innerHTML = '<i class="fas fa-globe"></i> <span>ES</span>';
+            langBtn.innerHTML = '<span class="lang-flag">🇺🇸</span><span class="lang-label">Language / ES</span>';
             downloadText.textContent = 'Download CV';
         }
 
@@ -56,7 +56,7 @@ document.getElementById('download-btn').addEventListener('click', function () {
                 entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
     reveals.forEach(function (el) { observer.observe(el); });
 })();
 
