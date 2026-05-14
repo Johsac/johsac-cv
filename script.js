@@ -33,11 +33,11 @@ document.getElementById('download-btn').addEventListener('click', downloadCV);
     langBtn.addEventListener('click', function () {
         if (currentLang === 'en') {
             currentLang = 'es';
-            langBtn.innerHTML = '<span class="lang-flag">🇪🇸</span><span class="lang-label">Language Español</span>';
+            langBtn.innerHTML = '<span class="lang-flag">🌐</span><span class="lang-label">Language Español</span>';
             downloadText.textContent = 'Descargar CV';
         } else {
             currentLang = 'en';
-            langBtn.innerHTML = '<span class="lang-flag">🇺🇸</span><span class="lang-label">Language English</span>';
+            langBtn.innerHTML = '<span class="lang-flag">🌐</span><span class="lang-label">Language English</span>';
             downloadText.textContent = 'Download CV';
         }
 
